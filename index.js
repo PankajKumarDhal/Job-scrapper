@@ -52,7 +52,7 @@ const saveToExcel = (jobs) => {
     const worksheet = xlsx.utils.json_to_sheet(jobs);
     xlsx.utils.book_append_sheet(workbook, worksheet, 'Jobs');
 
-    const filePath = './tech_jobs.xlsx';
+    const filePath = './jobs.xlsx';
     xlsx.writeFile(workbook, filePath);
     console.log(`Data saved to ${filePath}`);
   } catch (err) {
